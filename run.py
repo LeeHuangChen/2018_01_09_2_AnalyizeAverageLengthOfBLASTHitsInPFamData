@@ -1,9 +1,9 @@
 import Configurations as conf 
-import Functions as func
+
 
 
 def main():
-	func.main()
+	pass
 
 if __name__ == '__main__':
 	main()
