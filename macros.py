@@ -1,4 +1,5 @@
 import os
+
 def forAllLineInFile(fileInfo, doworkwithline):
 	#fileInfo=(fileIndex, inputFolder, inputfile)
 	inputFolder=fileInfo[1]
@@ -17,3 +18,7 @@ def forAllInputFiles(doworkwithfile,folder):
 	for i, inputfile in enumerate(inputfiles):
 		fileInfo=(i,folder, inputfile)
 		doworkwithfile(fileInfo)
+
+
+def forAllLinesInAllFiles(doworkonline,folder):
+	forAllInputFiles(lambda fileInfo:forAllLineInFile(fileInfo,doworkonline),folder)
