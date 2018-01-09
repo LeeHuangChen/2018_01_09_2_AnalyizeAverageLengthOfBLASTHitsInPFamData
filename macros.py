@@ -12,7 +12,7 @@ def forAllLineInFile(fileInfo, doworkwithline):
 			lineIndex+=1
 
 
-def forAllInputFiles(doworkwithfile,folder):
+def forAllFiles(doworkwithfile,folder):
 	inputfiles=os.listdir(folder)
 
 	for i, inputfile in enumerate(inputfiles):
