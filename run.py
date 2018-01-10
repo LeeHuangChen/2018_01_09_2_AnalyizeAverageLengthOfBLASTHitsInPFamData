@@ -4,8 +4,8 @@ import pfamLengths
 
 
 def main():
-	#print "running BlastLengths"
-	#BlastLengths.main()
+	print "running BlastLengths"
+	BlastLengths.main()
 	
 	print "running pfamLengths"
 	pfamLengths.main()
