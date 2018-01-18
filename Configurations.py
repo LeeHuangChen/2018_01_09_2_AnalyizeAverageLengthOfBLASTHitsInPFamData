@@ -1,6 +1,10 @@
-doThresholdMethod=True
+# doThresholdMethod=True
+doThresholdMethod=False
 threshold=.10
 
+numbins=100
+
+histogramFolder="Results/Histograms"
 
 
 

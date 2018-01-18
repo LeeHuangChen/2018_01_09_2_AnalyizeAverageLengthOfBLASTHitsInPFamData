@@ -1,14 +1,9 @@
 import Configurations as conf 
-import BlastLengths
-import pfamLengths
+import Functions
 
 
 def main():
-	print "running BlastLengths"
-	BlastLengths.main()
-	
-	print "running pfamLengths"
-	pfamLengths.main()
+	Functions.main()
 
 if __name__ == '__main__':
 	main()

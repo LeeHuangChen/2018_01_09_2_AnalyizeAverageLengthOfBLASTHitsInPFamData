@@ -2,6 +2,10 @@ import os
 import stat
 import sys
 
+import matplotlib.mlab as mlab
+import matplotlib.pyplot as plt
+
+
 #generate all the directories needed for the given path (helper function)
 def generateDirectories(path):
 	folders=path.split("/")
@@ -34,3 +38,17 @@ def progressbarGuide(length):
 		sys.stdout.write('-')
 	sys.stdout.write('|\n')
 	sys.stdout.flush()
+
+
+def histOne(data, numbins, normed=1, facecolor='green', alpha=0.75, label=""):
+	print data
+	n, bins, patches = plt.hist(data, numbins, normed=normed, facecolor=facecolor, alpha=alpha)
+
+def histographs(datas, numbins, outdir, labels,facecolors, normed=1, alpha=0.75):
+	for i, data in enumerate(datas):
+		facecolor=facecolors[i]
+		label=labels[i]
+
+		n, bins, patches = histOne(data, numbins, normed=normed, facecolor=facecolor, alpha=alpha, label=label)
+	plt.legend()
+	plt.savefig(outdir)
